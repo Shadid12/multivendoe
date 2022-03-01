@@ -36,7 +36,7 @@ export default function Shop() {
   return (
     <div className="container px-6 py-4">
       <h1>Products</h1>
-      <ProductList products={data.findShopByID.products.data}/>
+      <ProductList products={data.findShopByID?.products?.data}/>
     </div>
   )
 }
