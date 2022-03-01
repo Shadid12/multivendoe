@@ -1,0 +1,24 @@
+type Shop {
+  name: String!
+  category: [String!]
+  owner: User!
+  image: String
+  products: [Product!] @relation
+}
+
+type User {
+  name: String!
+  email: String!
+  shops: [Shop!] @relation
+}
+
+type Product {
+  name: String!
+  price: Float!
+  shop: Shop!
+  image: String!
+}
+
+type Query {
+  shops: [Shop]
+}
